@@ -1,0 +1,31 @@
+.personal-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.info-block {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.info-block p:nth-of-type(1) {
+  color: var(--light-color-1);
+  font-size: 1.2rem;
+}
+
+.info-block p:nth-of-type(2) {
+  color: var(--color-1);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+@media screen and (min-width: 425px) {
+  .info-block p:nth-of-type(2) {
+    color: var(--color-1);
+    font-weight: bold;
+    font-size: 1.4rem;
+  }
+}

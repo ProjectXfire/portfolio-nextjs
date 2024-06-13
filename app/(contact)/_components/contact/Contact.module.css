@@ -1,0 +1,13 @@
+.contact {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  gap: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .contact {
+    grid-template-columns: 1fr 1fr;
+  }
+}

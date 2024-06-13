@@ -1,0 +1,17 @@
+.socials {
+  display: flex;
+  gap: 5px;
+}
+
+.socials__link {
+  padding: 4px;
+  background-color: var(--light-color-1);
+  border-radius: 50%;
+  border: 2px solid var(--color-1);
+  transition: all 300ms;
+}
+
+.socials__link:hover {
+  background-color: var(--color-2);
+  border: 2px solid var(--color-1);
+}

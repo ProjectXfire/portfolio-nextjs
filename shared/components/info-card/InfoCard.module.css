@@ -1,0 +1,22 @@
+.info-card {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.info-card__icon {
+  padding: 20px;
+  border: 2px solid var(--color-1);
+  border-radius: 5px;
+  color: var(--color-3);
+}
+
+.info-card__data {
+  color: var(--light-color-1);
+}
+
+.info-card__data p:nth-of-type(2) {
+  color: var(--color-1);
+  font-size: 1.2rem;
+  font-weight: bold;
+}

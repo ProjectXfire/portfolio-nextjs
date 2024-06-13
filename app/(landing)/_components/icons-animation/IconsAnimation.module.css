@@ -1,0 +1,84 @@
+.icons-animation {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  animation: animateIcons 5s linear infinite;
+}
+
+.icon-box {
+  position: absolute;
+  display: inline-flex;
+  padding: 10px;
+  border: 2px solid var(--color-1);
+  background-color: transparent;
+  border-radius: 50%;
+  animation: animateIcon 5s linear infinite;
+}
+
+@keyframes animateIcons {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes animateIcon {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .icons-animation {
+    width: 240px;
+    height: 240px;
+  }
+}
+
+@media screen and (min-width: 400px) {
+  .icons-animation {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .icons-animation {
+    width: 310px;
+    height: 310px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .icons-animation {
+    margin-top: 0;
+    width: 260px;
+    height: 260px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .icons-animation {
+    width: 260px;
+    height: 260px;
+  }
+}
+
+@media screen and (min-width: 901px) {
+  .icons-animation {
+    width: 310px;
+    height: 310px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .icons-animation {
+    width: 340px;
+    height: 340px;
+  }
+}

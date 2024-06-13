@@ -1,0 +1,35 @@
+.sidebar {
+  width: 300px;
+  min-height: 100dvh;
+  margin-top: 0;
+  top: 0;
+  right: 0;
+  left: auto;
+  border-radius: 0px;
+}
+
+.sidebar__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 50%;
+}
+
+.sidebar__content {
+  overflow: auto;
+}
+
+.sidebar__links {
+  display: flex;
+  flex-direction: column;
+}
+
+.link {
+  padding: 10px;
+  text-align: center;
+  transition: all 300ms;
+}
+
+.link:hover {
+  background-color: var(--color-3);
+}

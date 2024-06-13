@@ -1,0 +1,12 @@
+.fadein-container {
+  animation: fadeIn 500ms forwards ease-in;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
