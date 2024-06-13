@@ -5,6 +5,7 @@ export { default as CustomText } from './custom-text/CustomText';
 export { default as FadeInContainer } from './fadein/FadeInContainer';
 export { default as Header } from './header/Header';
 export { default as InfoCard } from './info-card/InfoCard';
+export { default as Language } from './language/Language';
 export { default as Name } from './name/Name';
 export { default as Navbar } from './navbar/Navbar';
 export { default as Pagination } from './pagination/Pagination';

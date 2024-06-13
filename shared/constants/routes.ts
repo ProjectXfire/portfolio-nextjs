@@ -1,12 +1,12 @@
 export const routes = [
-  { name: 'Home', path: '/' },
-  { name: 'Resume', path: '/resume' },
-  { name: 'Projects', path: '/projects' },
-  { name: 'Contact', path: '/contact' },
+  { name: 'home', path: '/' },
+  { name: 'resume', path: '/resume' },
+  { name: 'projects', path: '/projects' },
+  { name: 'contact', path: '/contact' },
 ];
 
 export const resumeRoutes = [
-  { name: 'Education', path: '/resume' },
-  { name: 'Skills', path: '/resume/skills' },
-  { name: 'About Me', path: '/resume/about-me' },
+  { name: 'education', path: '/resume' },
+  { name: 'skills', path: '/resume/skills' },
+  { name: 'about me', path: '/resume/about-me' },
 ];

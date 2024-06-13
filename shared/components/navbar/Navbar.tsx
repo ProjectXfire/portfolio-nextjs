@@ -2,19 +2,21 @@
 
 import { usePathname } from 'next/navigation';
 import { useCallback } from 'react';
-import NextLink from 'next/link';
+import { Link } from '../../lib';
+import { useTranslations } from 'next-intl';
+import { useSidebar } from '@/shared/states';
 // Constants
 import { routes } from '@/shared/constants';
 // Styles
 import styles from './Navbar.module.css';
 // Components
-import { Button, ThemeToggle } from '..';
+import { Button, Language, ThemeToggle } from '..';
 import { Menu } from 'lucide-react';
-import { useSidebar } from '@/shared/states';
 
 function Navbar(): JSX.Element {
   const pathname = usePathname();
   const open = useSidebar((s) => s.open);
+  const t = useTranslations('navbar');
 
   const isOnPathname = useCallback(
     (routeName: string) => {
@@ -32,14 +34,14 @@ function Navbar(): JSX.Element {
       <div className={styles.links}>
         {routes.map((route) => (
           <div className={styles['link-container']} key={route.name}>
-            <NextLink
+            <Link
               className={`${styles.link} ${
                 isOnPathname(route.name) ? styles['link__selected'] : ''
               }`}
               href={route.path}
             >
-              {route.name}
-            </NextLink>
+              {t(route.name)}
+            </Link>
             <div
               className={`${styles['link__underline']} ${
                 isOnPathname(route.name) ? styles['link__underline--selected'] : ''
@@ -57,6 +59,7 @@ function Navbar(): JSX.Element {
       >
         <Menu className='h-4 w-4' />
       </Button>
+      <Language />
       <ThemeToggle />
     </nav>
   );
