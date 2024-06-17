@@ -42,10 +42,19 @@ export function useForm<T extends Record<string, any>>(values: T) {
     return isValid;
   };
 
+  const resetForm = () => {
+    const initialForm = {} as IForm<typeof values>;
+    for (const key in values) {
+      initialForm[key] = { error: true, value: '', touched: false };
+    }
+    setform(initialForm);
+  };
+
   return {
     ...form,
     onChangeValue,
     touched,
     isValidForm,
+    resetForm,
   };
 }

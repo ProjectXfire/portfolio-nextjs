@@ -92,26 +92,6 @@ export const projects: IProject[] = [
     image: '/images/project_17.jpg',
   },
   {
-    id: 20,
-    name: 'Thullo App',
-    tags: ['REACT', 'NEXTJS', 'TYPESCRIPT'],
-    description:
-      'This project is a tasks list progression. You can create a board and decided if this will be public or private, you can change it once it is created.\nIn the board, you can create the differents list that will content the tasks, add or remove members, assign permissions and add a board description.\nIn the task, you can will move it into the differents list, add or remove the responsible person, add a cover, add labels, add attachments, add a description and add comments.',
-    demo: 'https://comfy-manatee-d1a101.netlify.app/login',
-    code: 'https://github.com/ProjectXfire/devChallenges_Thullo',
-    image: '/images/project_21.jpg',
-  },
-  {
-    id: 21,
-    name: 'Journal App',
-    tags: ['REACT', 'NEXTJS', 'TYPESCRIPT'],
-    description:
-      'This project is a small journal. You can create your own notes and adding an image. You can create a new user or login using a login social.',
-    demo: 'https://udemy-journal.vercel.app/auth/login',
-    code: 'https://github.com/ProjectXfire/udemy_journal',
-    image: '/images/project_22.jpg',
-  },
-  {
     id: 22,
     name: 'Basic React Apps',
     tags: ['REACT', 'NEXTJS', 'TYPESCRIPT'],

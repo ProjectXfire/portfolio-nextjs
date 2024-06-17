@@ -3,7 +3,9 @@
     "name": "Nombre",
     "phone": "Teléfono",
     "email": "Correo",
-    "nationality": "Nacionalidad"
+    "nationality": "Nacionalidad",
+    "succesful-message": "Mensaje enviado de forma exitosa",
+    "error-message": "No se pudo enviar el mensaje"
   },
   "navbar": {
     "home": "Home",
@@ -43,6 +45,7 @@
   "contact": {
     "form_title": "Trabajemos juntos",
     "form_text": "Si deseas contactarme, no dudes en mandar un mensaje.",
+    "form_to": "Correo",
     "form_subject": "Tema",
     "form_message": "Escribe tu mensaje aquí.",
     "form_submit": "Enviar"

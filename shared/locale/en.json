@@ -3,7 +3,9 @@
     "name": "Name",
     "phone": "Phone",
     "email": "Email",
-    "nationality": "Nationality"
+    "nationality": "Nationality",
+    "succesful-message": "Message successful send",
+    "error-message": "Error on send message"
   },
   "navbar": {
     "home": "Home",
@@ -43,6 +45,7 @@
   "contact": {
     "form_title": "Let's work together",
     "form_text": "If you want to contact me feel free to send a message",
+    "form_to": "Email",
     "form_subject": "Subject",
     "form_message": "Type your message here.",
     "form_submit": "Send"

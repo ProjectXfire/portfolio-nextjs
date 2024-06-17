@@ -3,4 +3,21 @@
   border: 1px solid var(--color-1);
   border-radius: 50%;
   background-color: var(--color-3);
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.badge-image--animate {
+  animation: animate 500ms forwards ease-in-out;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
 }

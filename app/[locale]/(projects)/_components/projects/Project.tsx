@@ -1,6 +1,7 @@
 'use client';
 
 import NextImage from 'next/image';
+import { useEffect, useRef, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import type { IProject } from '@/shared/interfaces';
 // Components & Styles
@@ -29,28 +30,70 @@ function Project({ page, project, technologies, index, selectedIndex, totalItems
     return styles['project--next'];
   };
 
+  const projectRef = useRef<HTMLDivElement | null>(null);
+  const [isOnViewPort, setIsOnViewPort] = useState(false);
+
+  const observer = (): IntersectionObserver => {
+    const obs = new IntersectionObserver(
+      ([entry]) => {
+        setIsOnViewPort(entry.isIntersecting);
+      },
+      { threshold: 0.5 }
+    );
+    return obs;
+  };
+
+  useEffect(() => {
+    const obs = observer();
+    if (!projectRef.current) return;
+    const ref = projectRef.current;
+    obs.observe(ref);
+    return () => {
+      obs.unobserve(ref);
+    };
+  }, []);
+
   return (
-    <div className={`${styles.project} ${positionStyle()}`}>
+    <div ref={projectRef} className={`${styles.project} ${positionStyle()}`}>
       <div className={styles.project__detail}>
         <p className={styles.project__number}>{(page + 1).toString().padStart(2, '0')}</p>
         <Title text={project.name} size='large' />
         <CustomText text={project.description} textStyles={{ fontSize: '1.1rem' }} />
         <div className={styles['project__badges']}>
-          {project.tags.map((tag) => (
-            <BadgeImage key={tag} imagePath={technologies[tag.toLowerCase()]} />
+          {project.tags.map((tag, i) => (
+            <BadgeImage
+              key={tag}
+              index={i}
+              imagePath={technologies[tag.toLowerCase()]}
+              isContainerVisible={isOnViewPort}
+            />
           ))}
         </div>
         <Separator />
         <div className={styles.project__actions}>
-          <a className={styles['project-link']} href={project.demo} target='_blank'>
+          <a
+            className={`${styles['project-link']} ${
+              isOnViewPort && styles['project-link--animate']
+            }`}
+            href={project.demo}
+            target='_blank'
+          >
             <MoveUpRight /> {t('demo')}
           </a>
-          <a className={styles['project-link']} href={project.code} target='_blank'>
+          <a
+            className={`${styles['project-link']} ${
+              isOnViewPort && styles['project-link--animate']
+            }`}
+            href={project.code}
+            target='_blank'
+          >
             <Braces /> {t('code')}
           </a>
         </div>
       </div>
-      <div className={styles.project__image}>
+      <div
+        className={`${styles.project__image} ${isOnViewPort && styles['project__image--animate']}`}
+      >
         <NextImage
           fill
           src={project.image}

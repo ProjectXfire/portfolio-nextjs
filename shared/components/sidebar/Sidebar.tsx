@@ -1,6 +1,6 @@
 'use client';
 
-import NextLink from 'next/link';
+import { useTranslations } from 'next-intl';
 import { useSidebar } from '@/shared/states';
 // Components & Styles
 import styles from './Sidebar.module.css';
@@ -15,8 +15,10 @@ import {
 import { Button } from '../ui/Button';
 import { routes } from '@/shared/constants';
 import { X } from 'lucide-react';
+import { Link } from '@/shared/lib';
 
 function Sidebar(): JSX.Element {
+  const t = useTranslations('navbar');
   const toggle = useSidebar((s) => s.toggle);
   const isOpen = useSidebar((s) => s.isOpen);
   const close = useSidebar((s) => s.close);
@@ -30,9 +32,9 @@ function Sidebar(): JSX.Element {
           </DrawerHeader>
           <DrawerDescription className={styles.sidebar__links}>
             {routes.map((route, i) => (
-              <NextLink className={styles.link} key={i} href={route.path} onClick={close}>
-                {route.name}
-              </NextLink>
+              <Link className={styles.link} key={i} href={route.path} onClick={close}>
+                {t(route.name)}
+              </Link>
             ))}
           </DrawerDescription>
         </div>

@@ -1,0 +1,17 @@
+.animate-text span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateX(100%);
+  animation: fade-from-right 0.5s forwards;
+}
+
+.text-with-spacer {
+  visibility: hidden;
+}
+
+@keyframes fade-from-right {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

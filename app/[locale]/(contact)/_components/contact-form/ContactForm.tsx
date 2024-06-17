@@ -1,22 +1,37 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-// Components & Styles
-import { Button, CustomText, Input, Textarea, Title } from '@/shared/components';
-import styles from './ContactForm.module.css';
+import { useState } from 'react';
 import { useForm } from '@/shared/hooks';
+import { toast } from 'sonner';
+// Services
+import { sendEmail } from '@/core/services/email';
+// Components & Styles
+import styles from './ContactForm.module.css';
+import { Button, CustomText, Input, Textarea, Title } from '@/shared/components';
 
 function ContactForm(): JSX.Element {
   const t = useTranslations('contact');
-  const { message, subject, onChangeValue, touched, isValidForm } = useForm({
+  const t2 = useTranslations('commons');
+  const { message, subject, onChangeValue, touched, isValidForm, resetForm } = useForm({
     subject: '',
     message: '',
   });
+  const [isLoading, setIsLoading] = useState(false);
 
-  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!isValidForm()) return;
-    console.log({ message, subject });
+    setIsLoading(true);
+    const { error, message: successfulMessage } = await sendEmail(subject.value, message.value);
+    if (successfulMessage) {
+      resetForm();
+      toast.success(t2('succesful-message'));
+    }
+    if (error) {
+      toast.error(t2('error-message'));
+    }
+    setIsLoading(false);
   };
 
   return (
@@ -30,6 +45,7 @@ function ContactForm(): JSX.Element {
         type='text'
         placeholder={t('form_subject')}
         name='subject'
+        disabled={isLoading}
         value={subject.value}
         onChange={(e) => onChangeValue('subject', e.target.value)}
         onBlur={() => touched('subject')}
@@ -41,11 +57,17 @@ function ContactForm(): JSX.Element {
         placeholder={t('form_message')}
         rows={10}
         name='message'
+        disabled={isLoading}
         value={message.value}
         onChange={(e) => onChangeValue('message', e.target.value)}
         onBlur={() => touched('message')}
       />
-      <Button className={styles['contact-form__submit']} type='submit' name='submit'>
+      <Button
+        className={styles['contact-form__submit']}
+        disabled={isLoading}
+        type='submit'
+        name='submit'
+      >
         {t('form_submit')}
       </Button>
     </form>
