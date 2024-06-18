@@ -21,8 +21,8 @@ function Language(): JSX.Element {
 
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button variant='outline' size='icon'>
+      <DropdownMenuTrigger name='language-trigger' asChild>
+        <Button name='language' variant='outline' size='icon'>
           <Globe />
         </Button>
       </DropdownMenuTrigger>

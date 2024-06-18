@@ -3,6 +3,10 @@ import { skills } from '@/shared/data';
 import { FadeInContainer } from '@/shared/components';
 import { HeaderCategory, ResumeBlock, SkillsList } from '../../../_components';
 
+interface Props {
+  params: { locale: string };
+}
+
 function SkillsPage() {
   return (
     <FadeInContainer>

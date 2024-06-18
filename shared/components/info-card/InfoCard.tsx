@@ -1,3 +1,5 @@
+'use client';
+
 // Components & Styles
 import styles from './InfoCard.module.css';
 

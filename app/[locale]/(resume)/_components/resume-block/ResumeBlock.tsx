@@ -1,5 +1,3 @@
-'use client';
-
 import styles from './ResumeBlock.module.css';
 
 interface Props {

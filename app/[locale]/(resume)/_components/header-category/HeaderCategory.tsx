@@ -1,5 +1,3 @@
-'use client';
-
 import { useTranslations } from 'next-intl';
 // Components & Styles
 import { CustomText, Title } from '@/shared/components';

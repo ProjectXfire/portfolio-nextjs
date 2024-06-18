@@ -1,6 +1,10 @@
 // Components & Styles
-import { FadeInContainer, Title } from '@/shared/components';
+import { FadeInContainer } from '@/shared/components';
 import { HeaderCategory, Hobbies, PersonalInfo, ResumeBlock } from '../../../_components';
+
+interface Props {
+  params: { locale: string };
+}
 
 function AboutMePage() {
   return (

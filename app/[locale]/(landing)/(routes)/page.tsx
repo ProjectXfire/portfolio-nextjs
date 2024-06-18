@@ -1,5 +1,4 @@
 // Components
-import { Container } from '@/shared/components';
 import { Hero } from '../_components';
 import { FadeInContainer } from '@/shared/components';
 

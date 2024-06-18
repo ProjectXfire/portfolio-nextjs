@@ -1,3 +1,5 @@
+'use client';
+
 import { useTranslations } from 'next-intl';
 // Components & Styles
 import styles from './ContactInfo.module.css';
