@@ -8,10 +8,9 @@ export const skills: ISkill[] = [
   { name: 'React', pathIcon: '/icons/react.svg' },
   { name: 'React Native', pathIcon: '/icons/react native.svg' },
   { name: 'Angular', pathIcon: '/icons/angular.svg' },
-  { name: 'Redux', pathIcon: '/icons/redux.svg' },
   { name: 'Git', pathIcon: '/icons/git.svg' },
   { name: 'NextJS', pathIcon: '/icons/nextjs.svg' },
-  { name: 'Flutter', pathIcon: '/icons/flutter.svg' },
+  { name: 'Zustand', pathIcon: '/icons/zustand.jpg' },
   { name: 'NestJS', pathIcon: '/icons/nestjs.svg' },
 ];
 
@@ -23,10 +22,9 @@ export const technologies: Record<string, string> = {
   react: '/icons/react.svg',
   ['react native']: '/icons/react native.svg',
   angular: '/icons/angular.svg',
-  redux: '/icons/redux.svg',
   git: '/icons/git.svg',
   astro: '/icons/astrojs.svg',
   nextjs: '/icons/nextjs.svg',
-  flutter: '/icons/flutter.svg',
+  zustand: '/icons/zustand.jpg',
   nestjs: '/icons/nestjs.svg',
 };
