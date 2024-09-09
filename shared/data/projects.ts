@@ -113,7 +113,7 @@ export const projects: IProject[] = [
   {
     id: 24,
     name: 'My Journal',
-    tags: ['REACT', 'NEXTJS', 'REDUX', 'TYPESCRIPT'],
+    tags: ['REACT', 'NEXTJS', 'TYPESCRIPT'],
     description: 'This app is a simple journal, you can writes notes and add images if you prefer.',
     demo: 'https://my-journal-rnp5.vercel.app/login',
     code: 'https://github.com/ProjectXfire/my_journal',

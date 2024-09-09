@@ -10,7 +10,6 @@ export const skills: ISkill[] = [
   { name: 'Angular', pathIcon: '/icons/angular.svg' },
   { name: 'Git', pathIcon: '/icons/git.svg' },
   { name: 'NextJS', pathIcon: '/icons/nextjs.svg' },
-  { name: 'Zustand', pathIcon: '/icons/zustand.jpg' },
   { name: 'NestJS', pathIcon: '/icons/nestjs.svg' },
 ];
 
@@ -25,6 +24,5 @@ export const technologies: Record<string, string> = {
   git: '/icons/git.svg',
   astro: '/icons/astrojs.svg',
   nextjs: '/icons/nextjs.svg',
-  zustand: '/icons/zustand.jpg',
   nestjs: '/icons/nestjs.svg',
 };
