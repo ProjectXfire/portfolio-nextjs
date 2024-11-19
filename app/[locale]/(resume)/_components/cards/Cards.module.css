@@ -2,23 +2,22 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
 }
 
 .certificate-card-container:hover .certificate-card {
   background-color: var(--color-3);
-  transform: perspective(200px) rotateX(10deg);
+  transform: perspective(4000px) rotateX(-45deg);
   transform-origin: bottom;
 }
 
 .certificate-card-container:hover .certificate-hover {
-  transform: translateX(50%) perspective(none) rotateX(0deg);
   transform-origin: bottom;
   opacity: 0.6;
 }
 
 .certificate-card {
-  padding: 20px;
+  height: 200px;
+  padding: 15px;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -30,20 +29,22 @@
 
 .certificate-hover {
   width: 100%;
-  height: 100%;
+  height: 200px;
+  padding: 10px;
   position: absolute;
   display: flex;
   justify-content: center;
-  align-items: center;
   bottom: 0;
-  right: 50%;
   border: 1px solid var(--color-1);
   border-radius: 10px;
   background: var(--bg-dark);
-  transform: translateX(50%) perspective(150px) rotateX(20deg);
-  transform-origin: bottom;
   opacity: 0;
-  transition: all 500ms;
+  transition: all 300ms;
+}
+
+.certificate-hover a {
+  font-size: 1.2rem;
+  color: var(--text-color);
 }
 
 .certificate-card__subtitle {
@@ -102,54 +103,10 @@
   & p {
     color: var(--color-3);
     font-weight: bold;
+    font-size: 1.2rem;
   }
 }
 
 .skill-card-container:hover .skill-card-inner {
   transform: rotateY(180deg);
 }
-
-/*
-.skill-card::before {
-  content: '';
-  position: absolute;
-  z-index: -2;
-  left: -50%;
-  top: -50%;
-  width: 200%;
-  height: 200%;
-  background-color: transparent;
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  background-image: conic-gradient(transparent, #124563, transparent 50%);
-  animation: rotate 4s linear infinite;
-}
-
-.skill-card::after {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  left: 6px;
-  top: 6px;
-  width: calc(100% - 12px);
-  height: calc(100% - 12px);
-  background: #173d5a;
-  border-radius: 5px;
-}
-
-@keyframes rotate {
-  100% {
-    transform: rotate(1turn);
-  }
-}
-
-.skill-card:hover {
-  outline: 1px solid var(--color-1);
-  outline-width: 8px;
-  outline-offset: -8px;
-}
-  outline: 2px solid var(--color-2);
-  border: 2px solid var(--color-2);
-  outline-offset: -2px;
-  transition: outline-width 200ms ease, outline-offset 200ms ease;
-*/

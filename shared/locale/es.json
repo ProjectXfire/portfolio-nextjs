@@ -5,7 +5,8 @@
     "email": "Correo",
     "nationality": "Nacionalidad",
     "succesful-message": "Mensaje enviado de forma exitosa",
-    "error-message": "No se pudo enviar el mensaje"
+    "error-message": "No se pudo enviar el mensaje",
+    "nacionality-name": "Peruana"
   },
   "navbar": {
     "home": "Home",
@@ -22,6 +23,7 @@
     "main title": "¿Por qué contratarme?",
     "main text": "Me gusta codear y aprender nuevas cosas continuamente.",
     "education": "Educación",
+    "certificate": "Ver certificado",
     "skills": "Habilidades",
     "about me": "Acerca de mi",
     "education_title": "Mi Educación",

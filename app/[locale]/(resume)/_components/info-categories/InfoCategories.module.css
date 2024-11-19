@@ -10,39 +10,38 @@
   gap: 20px;
 }
 
-.info-links {
+.info-link {
   position: relative;
   width: 100%;
   display: flex;
   overflow: hidden;
+  border-radius: 8px;
+  border: 2px solid var(--color-1);
 }
 
-.info-links__link {
+.info-link__link {
   width: 100%;
   padding: 10px 5px;
   font-size: 1.2rem;
   text-align: center;
-  border: 2px solid var(--color-1);
-  border-radius: 8px;
 }
 
-.info-links__effect {
+.info-link__effect {
   position: absolute;
   width: 100%;
   height: 100%;
-  border-radius: 8px;
   background-color: var(--color-3);
-  transform: translate(-100%);
+  transform: translate(-100%) skewX(-50deg);
   transition: all 500ms;
   pointer-events: none;
 }
 
 .info-link-selected {
-  transform: translate(0%);
+  transform: translate(50%) skewX(-50deg);
 }
 
-.info-links:hover .info-links__effect {
-  transform: translate(0%);
+.info-link:hover .info-link__effect {
+  transform: translate(50%) skewX(-50deg);
 }
 
 @media screen and (min-width: 768px) {

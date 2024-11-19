@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { useMemo } from 'react';
-import styles from './Title.module.css';
+import { useMemo } from "react";
+import styles from "./Title.module.css";
 
-type Size = 'small' | 'medium' | 'large';
+type Size = "small" | "medium" | "large";
 
 interface Props {
   text: string;
@@ -13,14 +13,14 @@ interface Props {
 function Title({ size, text }: Props): JSX.Element {
   const customSize = useMemo(() => {
     switch (size) {
-      case 'small':
-        return '1.2rem';
-      case 'medium':
-        return '2rem';
-      case 'large':
-        return '3rem';
+      case "small":
+        return "1.2rem";
+      case "medium":
+        return "1.9rem";
+      case "large":
+        return "2.8rem";
       default:
-        return '1.2rem';
+        return "1.2rem";
     }
   }, [size]);
 

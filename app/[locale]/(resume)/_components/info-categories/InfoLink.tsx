@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { usePathname } from 'next/navigation';
-import { Link } from '@/shared/lib';
+import { usePathname } from "next/navigation";
+import { Link } from "@/shared/lib";
 // Components & Styles
-import styles from './InfoCategories.module.css';
+import styles from "./InfoCategories.module.css";
 
 interface Props {
   url: string;
@@ -13,14 +13,16 @@ interface Props {
 function InfoLink({ url, name }: Props): JSX.Element {
   const pathname = usePathname();
 
+  const pathnameWithoutLocale = `/${pathname.split("/").slice(2).join("/")}`;
+
   return (
-    <li className={styles['info-links']}>
-      <Link className={styles['info-links__link']} href={url}>
+    <li className={styles["info-link"]}>
+      <Link className={styles["info-link__link"]} href={url}>
         {name}
       </Link>
       <div
-        className={`${styles['info-links__effect']} ${
-          pathname === url ? styles['info-link-selected'] : ''
+        className={`${styles["info-link__effect"]} ${
+          url === pathnameWithoutLocale ? styles["info-link-selected"] : ""
         }`}
       />
     </li>

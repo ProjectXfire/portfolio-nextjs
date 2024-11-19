@@ -5,7 +5,8 @@
     "email": "Email",
     "nationality": "Nationality",
     "succesful-message": "Message successful send",
-    "error-message": "Error on send message"
+    "error-message": "Error on send message",
+    "nacionality-name": "Peruvian"
   },
   "navbar": {
     "home": "Home",
@@ -22,6 +23,7 @@
     "main title": "Why hire me?",
     "main text": "I like to code and continually learning new things about it.",
     "education": "Education",
+    "certificate": "See certificate",
     "skills": "Skills",
     "about me": "About me",
     "education_title": "My Education",
