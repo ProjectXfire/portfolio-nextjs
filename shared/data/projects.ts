@@ -4,11 +4,11 @@ export const projects: IProject[] = [
   {
     id: 1,
     name: "Find the pair",
-    tags: ["REACT", "JAVASCRIPT"],
+    tags: ["REACT", "NEXTJS", "TYPESCRIPT"],
     description:
       "In this project, I was practice my knowledge after been completed the course of react. It is a simple game that you need to find its pair of multiple cards, using the api Rick & Morty to decorate each card with theirs characters.",
-    demo: "https://zen-shockley-02f050.netlify.app/",
-    code: "https://github.com/ProjectXfire/find_the_pair",
+    demo: "https://angular19-find-the-pair.vercel.app/",
+    code: "https://github.com/ProjectXfire/angular19-find-the-pair",
     image: "/images/project_1.jpg",
   },
   {
@@ -145,5 +145,14 @@ export const projects: IProject[] = [
     demo: "https://chic-hotteok-846f75.netlify.app/",
     code: "https://github.com/ProjectXfire/devChallenges-js-vainilla-word-scramble",
     image: "/images/project_32.jpg",
+  },
+  {
+    id: 32,
+    name: "UWEB",
+    tags: ["NEXTJS", "REACT", "TYPESCRIPT"],
+    description: "This is template of a web for content",
+    demo: "https://uweb-clone.vercel.app/",
+    code: "https://github.com/ProjectXfire/uweb-clone",
+    image: "/images/project_33.jpg",
   },
 ];
