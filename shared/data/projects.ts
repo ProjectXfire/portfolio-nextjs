@@ -94,7 +94,7 @@ export const projects: IProject[] = [
     tags: ["REACT", "NEXTJS", "TYPESCRIPT"],
     description:
       "This app is a simple workspace to create you boards and your tasks, you can drop and drags your list and your tasks. Add an subscription to upgrade your account to create more boards.",
-    demo: "https://trello-clone-5d3s.vercel.app",
+    demo: "https://trello-clone-nine-flame.vercel.app/",
     code: "https://github.com/ProjectXfire/trello-clone",
     image: "/images/project_27.jpg",
   },
