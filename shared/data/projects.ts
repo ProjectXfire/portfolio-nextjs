@@ -52,25 +52,6 @@ export const projects: IProject[] = [
     image: "/images/project_15.jpg",
   },
   {
-    id: 22,
-    name: "Basic React Apps",
-    tags: ["REACT", "NEXTJS", "TYPESCRIPT"],
-    description: "This app content many simple proyects, like lists, modals, menus, sidebar, etc.",
-    demo: "https://basic-projects.vercel.app/",
-    code: "https://github.com/ProjectXfire/basic_projects",
-    image: "/images/project_23.jpg",
-  },
-  {
-    id: 23,
-    name: "Advanced React Apps",
-    tags: ["REACT", "NEXTJS", "TYPESCRIPT"],
-    description:
-      "This app content some advanced proyects, like search, pagination, infinite scroll, etc.",
-    demo: "https://advanced-proyects.vercel.app/",
-    code: "https://github.com/ProjectXfire/advanced_proyects",
-    image: "/images/project_24.jpg",
-  },
-  {
     id: 24,
     name: "My Journal",
     tags: ["REACT", "NEXTJS", "TYPESCRIPT"],
@@ -154,5 +135,15 @@ export const projects: IProject[] = [
     demo: "https://uweb-clone.vercel.app/",
     code: "https://github.com/ProjectXfire/uweb-clone",
     image: "/images/project_33.jpg",
+  },
+  {
+    id: 33,
+    name: "Guess Word",
+    tags: ["ANGULAR", "REACT", "TYPESCRIPT"],
+    description:
+      "In this game you must guess the word, selecting a letter and if it is in the word will show in it.",
+    demo: "https://guess-word-theta.vercel.app/",
+    code: "https://github.com/ProjectXfire/guess-word",
+    image: "/images/project_34.jpg",
   },
 ];
