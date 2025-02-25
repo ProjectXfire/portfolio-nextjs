@@ -1,5 +1,5 @@
 import "./globals.css";
-import { Crimson_Pro as FontSans } from "next/font/google";
+import { Itim as FontSans } from "next/font/google";
 import { Metadata } from "next";
 import { cn } from "@/shared/lib";
 

@@ -139,7 +139,7 @@ export const projects: IProject[] = [
   {
     id: 33,
     name: "Guess Word",
-    tags: ["ANGULAR", "REACT", "TYPESCRIPT"],
+    tags: ["ANGULAR", "TYPESCRIPT"],
     description:
       "In this game you must guess the word, selecting a letter and if it is in the word will show in it.",
     demo: "https://guess-word-theta.vercel.app/",
