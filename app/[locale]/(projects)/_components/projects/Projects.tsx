@@ -28,7 +28,7 @@ function Projects({ projects }: Props): JSX.Element {
       <div className={styles["projects-techs"]}>
         <PressButton
           bgColor="var(--bg-icon)"
-          baseColor="var(--border-card)"
+          baseColor="var(--bg-color-2)"
           onClick={() => onSelectTech("all")}
         >
           All
@@ -36,7 +36,7 @@ function Projects({ projects }: Props): JSX.Element {
         {Object.entries(techFilter).map(([key, icon], i) => (
           <PressButton
             key={i}
-            baseColor="var(--border-card)"
+            baseColor="var(--bg-color-2)"
             bgColor="var(--bg-icon)"
             onClick={() => onSelectTech(key)}
           >

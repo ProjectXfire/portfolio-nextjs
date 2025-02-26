@@ -1,6 +1,6 @@
 .certificates-list {
-  padding: 10px;
-  max-height: 400px;
+  padding: 50px 10px;
+  min-height: 800px;
   display: grid;
   grid-template-columns: 1fr;
   overflow: auto;
