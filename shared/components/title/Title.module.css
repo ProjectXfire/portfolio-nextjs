@@ -1,5 +1,6 @@
 .title {
   font-size: 3rem;
+  line-height: 2.5rem;
   color: var(--color-1);
   text-shadow: 2px 1px 3px var(--light-color-1);
 }

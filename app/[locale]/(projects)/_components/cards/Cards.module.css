@@ -3,87 +3,94 @@
   height: 250px;
   position: relative;
   overflow: hidden;
-  border: 2px solid var(--border-card);
+  border: 2px solid var(--color-1);
   border-radius: 10px;
   cursor: default;
   animation: fadeIn 500ms forwards ease-in-out;
   overflow: hidden;
 }
 
-.card:hover .card-hover {
-  transform: translateY(0%);
+.card__content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  transition: all 500ms ease-in-out;
+  background-color: var(--bg-color-3);
+  z-index: 2;
+}
+
+.card:hover .card__content {
+  left: -110px;
+}
+
+.card__image {
+  width: 450px;
+  height: 300px;
+  position: absolute;
+  top: -80px;
+  left: -200px;
+  border-radius: 50%;
+  transform: rotate(-20deg);
+  border: 1px solid var(--color-1);
+  overflow: hidden;
+}
+
+.card__title {
+  width: 100%;
+  position: absolute;
+  top: 170px;
+  left: 170px;
+  font-size: 16px;
+  transform: rotate(-15deg);
+}
+
+.card-background {
+  width: 450px;
+  height: 300px;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .card-image {
   object-fit: cover;
 }
 
-.card-name {
-  padding: 5px;
+.card__tags {
   position: absolute;
-  bottom: 10px;
   right: 10px;
-  font-size: 0.85rem;
-  background-color: var(--border-card);
-  letter-spacing: 1px;
-  border: 1px solid white;
-  border-radius: 5px;
-  font-weight: bold;
-}
-
-.card-icons-tech {
-  position: absolute;
-  top: 10px;
-  left: 10px;
+  bottom: 10px;
   display: flex;
+  flex-direction: column;
   gap: 5px;
 }
 
-.card-icons-tech img {
+.card-tag {
   padding: 2px;
-  background-color: var(--bg-icon);
+  background-color: var(--border-card);
   border-radius: 50%;
 }
 
-.card-hover {
+.card__background {
   width: 100%;
   height: 100%;
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.7);
-  transform: translateY(-100%);
-  transition: transform 500ms;
-}
-
-.card-hover-description {
-  padding: 5px 10px;
-  height: 195px;
-  overflow: auto;
-  color: var(--text-color);
-}
-
-.card-hover-actions {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
+  z-index: 1;
   display: flex;
-  gap: 5px;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
 }
 
-.card-hover-actions a {
-  padding: 5px;
+.card-link {
+  padding: 5px 12px;
   display: flex;
   align-items: center;
   gap: 5px;
-  font-size: 0.9rem;
-  border-radius: 5px;
-  background-color: var(--bg-icon);
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
+  background-color: var(--green-color);
+  margin-right: 10px;
+  transform: rotate(-45deg);
+  border-radius: 10px;
+  color: var(--text-color);
 }

@@ -28,15 +28,20 @@
     --color-1: #092c6e;
     --light-color-1: #76a0c2;
     --color-2: #4e6f9b;
-    --color-3: rgba(34, 110, 180, 0.5);
+    --color-3: rgba(4, 23, 46, 0.5);
+    --color-4: #cfd7e4;
     --error: #e73636;
     --bg-dark: rgba(2, 8, 23, 1);
+    --bg-color: rgba(227, 232, 240, 0.8);
     --bg-color-effect: #050d25;
     --bg-color-light-effect: #f3f7ff;
     --linear-gradient-dark: "linear-gradient(0deg,_#020817_19%,_#212a41_50%,_#020817_88%)";
-    --border-card: #dce6f3;
+    --border-card: #3e5777;
     --bg-icon: #88b1e6;
     --text-color: white;
+    --bg-color-2: #10407e;
+    --bg-color-3: #ccd6e4;
+    --green-color: #50c44c;
   }
 
   .dark {
@@ -59,9 +64,14 @@
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
-    --border-card: #4489e4;
     --bg-icon: #1e3096;
     --text-color: white;
+    --bg-color: rgba(7, 22, 44, 0.8);
+    --color-3: rgba(34, 110, 180, 0.5);
+    --color-4: #051629;
+    --bg-color-2: #2e5db4;
+    --bg-color-3: #071127;
+    --border-card: #dce6f3;
   }
 }
 * {
