@@ -13,6 +13,7 @@ export { default as Pagination } from "./pagination/Pagination";
 export { default as Providers } from "./providers/Providers";
 export { default as Sidebar } from "./sidebar/Sidebar";
 export { default as TextAnimated } from "./text-animated/TextAnimated";
+export { default as TextTyped } from "./text-animated/TextTyped";
 export { default as ThemeToggle } from "./theme-toggle/ThemeToggle";
 export { default as Title } from "./title/Title";
 export * from "./ui/Button";
