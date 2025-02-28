@@ -21,6 +21,7 @@ export * from "./ui/Drawer";
 export * from "./ui/DropdownMenu";
 export * from "./ui/Input";
 export * from "./ui/Separator";
+export * from "./ui/Sheet";
 export * from "./ui/Sonner";
 export * from "./ui/Textarea";
 export * from "./ui/Tooltip";
