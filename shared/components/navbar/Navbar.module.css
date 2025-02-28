@@ -14,17 +14,19 @@
 }
 
 .link-container {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  cursor: pointer;
 }
 
-.link-container:hover .link {
-  color: var(--color-1);
+.link-container:hover .link__selected {
+  animation: animate-link 500ms ease-in-out forwards;
 }
 
-.link-container:hover .link__underline {
-  animation: underline 300ms forwards ease-in-out;
+.link-container:hover .link__bar {
+  animation: underline-bar 500ms ease-in-out forwards;
 }
 
 .link {
@@ -33,22 +35,41 @@
   color: var(--light-color-1);
 }
 
-.link__selected {
-  color: var(--color-1);
-}
-
-.link__underline {
+.link__bar {
   width: 0%;
   height: 2px;
   margin-top: 2px;
-  background-color: var(--color-1);
+  background-color: var(--color-5);
+  transition: all 500ms ease-in-out;
 }
 
-.link__underline--selected {
-  animation: underline 300ms forwards ease-in-out;
+.link__selected {
+  position: absolute;
+  font-size: 1.2rem;
+  color: var(--color-5);
+  opacity: 0;
 }
 
-@keyframes underline {
+.link__selected-animated {
+  animation: animate-link 500ms ease-in-out forwards;
+}
+
+.link__bar-animated {
+  animation: underline-bar 500ms ease-in-out forwards;
+}
+
+@keyframes animate-link {
+  0% {
+    opacity: 0;
+    scale: 1.5;
+  }
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@keyframes underline-bar {
   0% {
     width: 0%;
   }

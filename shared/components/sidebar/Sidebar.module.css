@@ -1,38 +1,84 @@
-.sidebar {
-  width: 300px;
-  min-height: 100dvh;
-  margin-top: 0;
-  top: 0;
-  right: 0;
-  left: auto;
-  border-radius: 0px;
-}
-
-.sidebar__close {
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  border-radius: 50%;
-}
-
-.sidebar__content {
-  margin-top: 30px;
-  overflow: auto;
-}
-
 .sidebar__links {
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
+  gap: 5px;
 }
 
 .link {
+  width: 100%;
+  height: 45px;
   padding: 10px;
+  position: relative;
   text-align: center;
-  transition: all 300ms;
+  transition: all 500ms;
 }
 
-.link:hover {
+.link__decoration-top {
+  top: 0;
+  left: -6px;
+  transform: rotate(-45deg);
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid var(--color-3);
+}
+
+.link__decoration-bottom {
+  bottom: 0;
+  right: -6px;
+  transform: rotate(135deg);
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid var(--color-3);
+}
+
+.link__back {
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
   background-color: var(--color-3);
+  z-index: -1;
+  transform-origin: center;
+  scale: 0;
+  transition: scale 300ms ease-in-out;
+}
+
+.link__bar-top {
+  position: absolute;
+  top: -15px;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-3);
+  opacity: 0;
+  transition: opacity 300ms ease-in-out, top 300ms ease-in-out;
+}
+
+.link__bar-bottom {
+  position: absolute;
+  bottom: -15px;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-3);
+  opacity: 0;
+  transition: opacity 300ms ease-in-out, bottom 300ms ease-in-out;
+}
+
+.link:hover .link__back {
+  scale: 1;
+}
+
+.link:hover .link__bar-top {
+  top: 0;
+  opacity: 1;
+}
+
+.link:hover .link__bar-bottom {
+  bottom: 0;
+  opacity: 1;
 }

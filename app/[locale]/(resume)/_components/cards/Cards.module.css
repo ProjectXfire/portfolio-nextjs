@@ -71,54 +71,71 @@
 /* Skill Card */
 
 .skill-card-container {
+  position: relative;
   width: 100%;
-  height: 150px;
   background-color: transparent;
   cursor: default;
 }
 
-.skill-card-inner {
+.skill-card-text {
   width: 100%;
-  height: 100%;
-  position: relative;
+  position: absolute;
+  top: 59px;
+  left: 20px;
   text-align: center;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
+  z-index: -1;
+  transform: rotate(-20deg) skew(25deg) translate(0, 0);
+  font-size: 1.2rem;
+  text-shadow: 1px 1px 1px var(--blue-color-1);
 }
 
 .skill-card {
+  padding: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 1px 1px 5px 1px var(--color-3);
+  gap: 10px;
+  transform: rotate(-20deg) skew(25deg) translate(0, 0);
+  background-color: var(--blue-color-4);
+  transition: all 500ms ease-in-out;
 }
 
-.skill-card,
-.skill-card--back {
+.skill-card:before {
+  content: "";
   position: absolute;
-  width: 100%;
+  top: 10px;
+  left: -20px;
   height: 100%;
-  backface-visibility: hidden;
-  background-color: var(--bg-color);
+  width: 20px;
+  background: var(--blue-color-3);
+  transform: 0.5s;
+  transform: rotate(0deg) skewY(-45deg);
+  transition: all 500ms ease-in-out;
 }
 
-.skill-card--back {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transform: rotateY(180deg);
-  border-radius: 10px;
-  box-shadow: 0px 0px 5px 1px var(--color-3);
-  & p {
-    color: var(--color-3);
-    font-weight: bold;
-    font-size: 1.2rem;
-  }
+.skill-card:after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: -10px;
+  height: 20px;
+  width: 100%;
+  background: var(--blue-color-3);
+  transform: 0.5s;
+  transform: rotate(0deg) skewX(-45deg);
+  transition: all 500ms ease-in-out;
+  overflow: hidden;
 }
 
-.skill-card-container:hover .skill-card-inner {
-  transform: rotateY(180deg);
+.skill-card-container:hover .skill-card {
+  transform: rotate(-20deg) skew(25deg) translate(30px, -25px);
+  background: var(--blue-color-1);
+}
+
+.skill-card-container:hover .skill-card:before {
+  background: var(--blue-color-2);
+}
+
+.skill-card-container:hover .skill-card:after {
+  background: var(--blue-color-2);
 }
