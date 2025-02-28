@@ -1,6 +1,7 @@
 "use client";
 
 import type { IProject } from "@/shared/interfaces";
+import { MouseEvent, useRef, useState, TouchEvent } from "react";
 import NextImage from "next/image";
 import NextLink from "next/link";
 import { useTranslations } from "next-intl";
@@ -14,10 +15,51 @@ interface Props {
 
 function ProjectCard({ project, techIcons }: Props): JSX.Element {
   const t = useTranslations("projects");
+  const moveElement = useRef<HTMLDivElement | null>(null);
+  const initMoveValue = useRef(0);
+  const [leftMove, setLeftMove] = useState(0);
+
+  const handleOpenDoor = (e: MouseEvent): void => {
+    e.preventDefault();
+    e.stopPropagation();
+    initMoveValue.current = e.clientX;
+    document.addEventListener("mousemove", moveDoor);
+    document.addEventListener("mouseup", dropDoor);
+  };
+
+  const handleOpenDoorMobile = (e: TouchEvent<HTMLButtonElement>) => {
+    initMoveValue.current = e.touches[0].clientX;
+    document.addEventListener("touchmove", moveDoorMobile);
+    document.addEventListener("touchend", dropDoor);
+  };
+
+  const moveDoorMobile = (e: globalThis.TouchEvent) => {
+    const door = moveElement.current;
+    if (!door) return;
+    const position = (initMoveValue.current - e.touches[0].clientX) * 2;
+    const value = Math.min(110, Math.max(0, position));
+    door.style.setProperty("left", `-${value}px`);
+  };
+
+  const moveDoor = (e: globalThis.MouseEvent) => {
+    const door = moveElement.current;
+    if (!door) return;
+    const position = (initMoveValue.current - e.clientX) * 2;
+    const value = Math.min(110, Math.max(0, position));
+    door.style.setProperty("left", `-${value}px`);
+  };
+
+  const dropDoor = () => {
+    document.removeEventListener("mousemove", moveDoor);
+    document.removeEventListener("mouseup", dropDoor);
+
+    document.removeEventListener("touchmove", moveDoorMobile);
+    document.removeEventListener("touchend", dropDoor);
+  };
 
   return (
     <article className={styles.card}>
-      <div className={styles.card__content}>
+      <div ref={moveElement} className={styles.card__content}>
         <div className={styles.card__image}>
           <NextImage
             className={styles["card-image"]}
@@ -41,6 +83,15 @@ function ProjectCard({ project, techIcons }: Props): JSX.Element {
             </text>
           </svg>
         </div>
+        <button
+          type="button"
+          name="door"
+          className={styles.card__handle}
+          onMouseDown={handleOpenDoor}
+          onTouchStart={handleOpenDoorMobile}
+        >
+          <NextImage src="/icons/handle.png" alt="handle" width={40} height={40} />
+        </button>
         <div className={styles.card__tags}>
           {techIcons.map((image, i) => (
             <NextImage
