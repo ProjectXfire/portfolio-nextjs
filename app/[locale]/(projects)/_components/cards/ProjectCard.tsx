@@ -90,7 +90,7 @@ function ProjectCard({ project, techIcons }: Props): JSX.Element {
           onMouseDown={handleOpenDoor}
           onTouchStart={handleOpenDoorMobile}
         >
-          <NextImage src="/icons/handle.png" alt="handle" width={40} height={40} />
+          <NextImage src="/icons/handle.png" alt="handle" width={35} height={35} />
         </button>
         <div className={styles.card__tags}>
           {techIcons.map((image, i) => (
@@ -106,18 +106,14 @@ function ProjectCard({ project, techIcons }: Props): JSX.Element {
         </div>
       </div>
       <div className={styles.card__background}>
-        <div className={styles["card-link"]}>
+        <NextLink href={project.demo} className={styles["card-link"]} target="_blank">
           <Braces size={15} />
-          <NextLink href={project.demo} type="button" target="_blank">
-            {t("demo")}
-          </NextLink>
-        </div>
-        <div className={styles["card-link"]}>
+          <div>{t("demo")}</div>
+        </NextLink>
+        <NextLink href={project.code} className={styles["card-link"]} target="_blank">
           <MoveUpRight size={15} />
-          <NextLink href={project.code} type="button" target="_blank">
-            {t("code")}
-          </NextLink>
-        </div>
+          <div>{t("code")}</div>
+        </NextLink>
       </div>
     </article>
   );
