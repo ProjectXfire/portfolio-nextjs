@@ -146,4 +146,14 @@ export const projects: IProject[] = [
     code: "https://github.com/ProjectXfire/guess-word",
     image: "/images/project_34.jpg",
   },
+  {
+    id: 34,
+    name: "Trapped",
+    tags: ["REACT", "TYPESCRIPT"],
+    description:
+      "In this game you must guess the word, selecting a letter and if it is in the word will show in it.",
+    demo: "https://trapped-sigma.vercel.app/",
+    code: "https://github.com/ProjectXfire/trapped",
+    image: "/images/project_35.jpg",
+  },
 ];
