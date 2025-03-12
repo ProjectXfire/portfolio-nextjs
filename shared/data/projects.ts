@@ -151,7 +151,7 @@ export const projects: IProject[] = [
     name: "Trapped",
     tags: ["REACT", "TYPESCRIPT"],
     description:
-      "In this game you must guess the word, selecting a letter and if it is in the word will show in it.",
+      "Is a simple game when you must choose the best strategy to trap you oppenent. The game is per turn, each turn you have one move and set one hole (you can modify it, adding new modifiers). The player lose when around him only there are holes.",
     demo: "https://trapped-sigma.vercel.app/",
     code: "https://github.com/ProjectXfire/trapped",
     image: "/images/project_35.jpg",
