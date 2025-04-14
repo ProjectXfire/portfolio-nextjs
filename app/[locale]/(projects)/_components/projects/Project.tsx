@@ -1,15 +1,15 @@
-'use client';
+"use client";
 
-import NextImage from 'next/image';
-import { useEffect, useRef, useState } from 'react';
-import { useTranslations } from 'next-intl';
-import type { IProject } from '@/shared/interfaces';
+import NextImage from "next/image";
+import { useEffect, useRef, useState } from "react";
+import { useTranslations } from "next-intl";
+import type { IProject } from "@/shared/interfaces";
 // Components & Styles
-import styles from './Projects.module.css';
-import { BadgeImage, CustomText, Separator, Title } from '@/shared/components';
-import { Braces, MoveUpRight } from 'lucide-react';
+import styles from "./Projects.module.css";
+import { BadgeImage, CustomText, Separator, Title } from "@/shared/components";
+import { Braces, MoveUpRight } from "lucide-react";
 
-type Position = 'previous' | 'active' | 'next';
+type Position = "previous" | "active" | "next";
 
 interface Props {
   page: number;
@@ -20,14 +20,21 @@ interface Props {
   totalItems: number;
 }
 
-function Project({ page, project, technologies, index, selectedIndex, totalItems }: Props) {
-  const t = useTranslations('projects');
+function Project({
+  page,
+  project,
+  technologies,
+  index,
+  selectedIndex,
+  totalItems,
+}: Props): React.ReactElement {
+  const t = useTranslations("projects");
 
   const positionStyle = () => {
-    if (index === selectedIndex) return styles['project--active'];
+    if (index === selectedIndex) return styles["project--active"];
     if (selectedIndex - 1 === index || (selectedIndex === 0 && index === totalItems - 1))
-      return styles['project--previous'];
-    return styles['project--next'];
+      return styles["project--previous"];
+    return styles["project--next"];
   };
 
   const projectRef = useRef<HTMLDivElement | null>(null);
@@ -56,10 +63,10 @@ function Project({ page, project, technologies, index, selectedIndex, totalItems
   return (
     <div ref={projectRef} className={`${styles.project} ${positionStyle()}`}>
       <div className={styles.project__detail}>
-        <p className={styles.project__number}>{(page + 1).toString().padStart(2, '0')}</p>
-        <Title text={project.name} size='large' />
-        <CustomText text={project.description} textStyles={{ fontSize: '1.1rem' }} />
-        <div className={styles['project__badges']}>
+        <p className={styles.project__number}>{(page + 1).toString().padStart(2, "0")}</p>
+        <Title text={project.name} size="large" />
+        <CustomText text={project.description} textStyles={{ fontSize: "1.1rem" }} />
+        <div className={styles["project__badges"]}>
           {project.tags.map((tag, i) => (
             <BadgeImage
               key={tag}
@@ -72,33 +79,33 @@ function Project({ page, project, technologies, index, selectedIndex, totalItems
         <Separator />
         <div className={styles.project__actions}>
           <a
-            className={`${styles['project-link']} ${
-              isOnViewPort && styles['project-link--animate']
+            className={`${styles["project-link"]} ${
+              isOnViewPort && styles["project-link--animate"]
             }`}
             href={project.demo}
-            target='_blank'
+            target="_blank"
           >
-            <MoveUpRight /> {t('demo')}
+            <MoveUpRight /> {t("demo")}
           </a>
           <a
-            className={`${styles['project-link']} ${
-              isOnViewPort && styles['project-link--animate']
+            className={`${styles["project-link"]} ${
+              isOnViewPort && styles["project-link--animate"]
             }`}
             href={project.code}
-            target='_blank'
+            target="_blank"
           >
-            <Braces /> {t('code')}
+            <Braces /> {t("code")}
           </a>
         </div>
       </div>
       <div
-        className={`${styles.project__image} ${isOnViewPort && styles['project__image--animate']}`}
+        className={`${styles.project__image} ${isOnViewPort && styles["project__image--animate"]}`}
       >
         <NextImage
           fill
           src={project.image}
           alt={project.name}
-          sizes='(min-width: 0px) 100vw, (min-width: 768px) 50vw'
+          sizes="(min-width: 0px) 100vw, (min-width: 768px) 50vw"
           priority
         />
       </div>

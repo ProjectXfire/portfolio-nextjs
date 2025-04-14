@@ -16,7 +16,7 @@ function PressButton({
   textColor = "white",
   bgColor = "black",
   baseColor = "grey",
-}: Props): JSX.Element {
+}: Props): React.ReactElement {
   return (
     <div className={styles["button-container"]}>
       <button

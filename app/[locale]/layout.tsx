@@ -1,7 +1,7 @@
-import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages } from "next-intl/server";
 // Components
-import { Background, Container, Header, Providers, Sidebar } from '@/shared/components';
+import { Background, Container, Header, Providers, Sidebar } from "@/shared/components";
 
 export default async function AppLayout({
   children,
@@ -9,11 +9,11 @@ export default async function AppLayout({
 }: Readonly<{
   children: React.ReactNode;
   params: { locale: string };
-}>) {
+}>): Promise<React.ReactElement> {
   const messages = await getMessages();
 
   return (
-    <Providers attribute='class' defaultTheme='system' enableSystem disableTransitionOnChange>
+    <Providers attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
       <NextIntlClientProvider messages={messages}>
         <Background />
         <Container>

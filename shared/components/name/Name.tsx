@@ -1,12 +1,12 @@
-import styles from './Name.module.css';
+import styles from "./Name.module.css";
 
 interface Props {
   name: string;
 }
 
-function Name({ name }: Props): JSX.Element {
+function Name({ name }: Props): React.ReactElement {
   return (
-    <div className={styles['name-container']}>
+    <div className={styles["name-container"]}>
       <p className={styles.name}>
         {name}
         <span className={styles.dot}>.</span>

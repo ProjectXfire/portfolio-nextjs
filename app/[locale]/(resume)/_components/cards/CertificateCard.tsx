@@ -11,7 +11,7 @@ interface Props {
   link: string;
 }
 
-function CertificateCard({ headerTitle, title, subtitle, link }: Props): JSX.Element {
+function CertificateCard({ headerTitle, title, subtitle, link }: Props): React.ReactElement {
   const t = useTranslations("resume");
 
   return (

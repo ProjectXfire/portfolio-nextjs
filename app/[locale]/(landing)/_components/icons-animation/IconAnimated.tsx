@@ -1,6 +1,6 @@
-import NextImage from 'next/image';
+import NextImage from "next/image";
 // Components & styles
-import styles from './IconsAnimation.module.css';
+import styles from "./IconsAnimation.module.css";
 
 interface Props {
   imgPath: string;
@@ -11,7 +11,7 @@ interface Props {
   right?: number;
 }
 
-function IconAnimated({ bottom, left, right, top, imgPath, imgName }: Props): JSX.Element {
+function IconAnimated({ bottom, left, right, top, imgPath, imgName }: Props): React.ReactElement {
   return (
     <div
       style={{
@@ -20,7 +20,7 @@ function IconAnimated({ bottom, left, right, top, imgPath, imgName }: Props): JS
         right: right && `${right}px`,
         bottom: bottom && `${bottom}px`,
       }}
-      className={styles['icon-box']}
+      className={styles["icon-box"]}
     >
       <NextImage src={imgPath} alt={imgName} width={80} height={80} />
     </div>

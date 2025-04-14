@@ -1,18 +1,18 @@
-'use client';
+"use client";
 
-import styles from './TextAnimated.module.css';
+import styles from "./TextAnimated.module.css";
 
 interface Props {
   textArray: string[];
 }
 
-function TextAnimated({ textArray }: Props): JSX.Element {
+function TextAnimated({ textArray }: Props): React.ReactElement {
   return (
-    <div className={styles['animate-text']}>
+    <div className={styles["animate-text"]}>
       {textArray.map((char, i) => {
-        if (char === ' ')
+        if (char === " ")
           return (
-            <span className={styles['text-with-spacer']} key={i}>
+            <span className={styles["text-with-spacer"]} key={i}>
               -
             </span>
           );

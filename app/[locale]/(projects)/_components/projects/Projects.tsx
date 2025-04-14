@@ -13,7 +13,7 @@ interface Props {
   projects: IProject[];
 }
 
-function Projects({ projects }: Props): JSX.Element {
+function Projects({ projects }: Props): React.ReactElement {
   const [tech, setTech] = useState("all");
 
   const onSelectTech = (tech: string) => {

@@ -6,7 +6,7 @@ import { useTranslations } from "next-intl";
 import styles from "./Hobbies.module.css";
 import { Title } from "@/shared/components";
 
-function Hobbies(): JSX.Element {
+function Hobbies(): React.ReactElement {
   const t = useTranslations("resume");
 
   return (

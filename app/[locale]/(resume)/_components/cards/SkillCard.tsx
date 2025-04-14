@@ -7,7 +7,7 @@ interface Props {
   name: string;
 }
 
-function SkillCard({ imagePath, name }: Props): JSX.Element {
+function SkillCard({ imagePath, name }: Props): React.ReactElement {
   return (
     <li className={styles["skill-card-container"]}>
       <div className={styles["skill-card"]}>

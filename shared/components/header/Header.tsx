@@ -1,16 +1,16 @@
-import styles from './Header.module.css';
+import styles from "./Header.module.css";
 // Components
-import { Name, Navbar } from '..';
+import { Name, Navbar } from "..";
 
 interface Props {
   children: React.ReactNode;
 }
 
-function Header({ children }: Props): JSX.Element {
+function Header({ children }: Props): React.ReactElement {
   return (
     <>
       <header className={styles.header}>
-        <Name name='Gabriel' />
+        <Name name="Gabriel" />
         <Navbar />
       </header>
       <main>{children}</main>

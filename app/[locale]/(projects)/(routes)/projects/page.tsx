@@ -1,9 +1,9 @@
-import { projects } from '@/shared/data';
+import { projects } from "@/shared/data";
 // Components & Styles
-import { Projects } from '../../_components';
-import { FadeInContainer } from '@/shared/components';
+import { Projects } from "../../_components";
+import { FadeInContainer } from "@/shared/components";
 
-function ProjectsPage() {
+function ProjectsPage(): React.ReactElement {
   return (
     <FadeInContainer>
       <Projects projects={projects} />
