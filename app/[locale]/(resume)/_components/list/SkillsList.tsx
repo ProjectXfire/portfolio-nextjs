@@ -1,15 +1,15 @@
-import type { ISkill } from '@/shared/interfaces';
+import type { ISkill } from "@/shared/interfaces";
 // Components & Styles
-import styles from './List.module.css';
-import { SkillCard } from '..';
+import styles from "./List.module.css";
+import { SkillCard } from "..";
 
 interface Props {
   data: ISkill[];
 }
 
-function SkillsList({ data }: Props) {
+function SkillsList({ data }: Props): React.ReactElement {
   return (
-    <ul className={styles['skills-list']}>
+    <ul className={styles["skills-list"]}>
       {data.map((skill, i) => (
         <SkillCard key={i} imagePath={skill.pathIcon} name={skill.name} />
       ))}

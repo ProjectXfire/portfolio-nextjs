@@ -13,7 +13,7 @@ interface Props {
   techIcons: string[];
 }
 
-function ProjectCard({ project, techIcons }: Props): JSX.Element {
+function ProjectCard({ project, techIcons }: Props): React.ReactElement {
   const t = useTranslations("projects");
   const moveElement = useRef<HTMLDivElement | null>(null);
   const initMoveValue = useRef(0);

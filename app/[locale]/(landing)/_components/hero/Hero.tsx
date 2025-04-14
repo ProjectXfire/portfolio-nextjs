@@ -4,9 +4,9 @@ import { useTranslations } from "next-intl";
 // Components & styles
 import styles from "./Hero.module.css";
 import { IconsAnimation, Social } from "..";
-import { TextAnimated, TextTyped } from "@/shared/components";
+import { TextTyped } from "@/shared/components";
 
-function Hero(): JSX.Element {
+function Hero(): React.ReactElement {
   const t = useTranslations("landing");
 
   return (

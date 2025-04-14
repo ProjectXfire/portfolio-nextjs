@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { CSSProperties, useState } from 'react';
+import { CSSProperties, useState } from "react";
 // Components & Styles
-import styles from './Pagination.module.css';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import styles from "./Pagination.module.css";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 interface Props {
   initValue: number;
@@ -12,7 +12,12 @@ interface Props {
   paginationStyles?: CSSProperties;
 }
 
-function Pagination({ initValue, page, maxPage = 10, paginationStyles }: Props): JSX.Element {
+function Pagination({
+  initValue,
+  page,
+  maxPage = 10,
+  paginationStyles,
+}: Props): React.ReactElement {
   const [currentPage, setCurrentPage] = useState(initValue < 1 ? 1 : initValue);
 
   const previousPage = () => {
@@ -31,10 +36,10 @@ function Pagination({ initValue, page, maxPage = 10, paginationStyles }: Props):
 
   return (
     <div className={styles.pagination} style={paginationStyles}>
-      <button type='button' name='left' onClick={previousPage}>
+      <button type="button" name="left" onClick={previousPage}>
         <ChevronLeft />
       </button>
-      <button type='button' name='right' onClick={nextPage}>
+      <button type="button" name="right" onClick={nextPage}>
         <ChevronRight />
       </button>
     </div>

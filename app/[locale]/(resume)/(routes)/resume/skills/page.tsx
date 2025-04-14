@@ -1,17 +1,17 @@
-import { skills } from '@/shared/data';
+import { skills } from "@/shared/data";
 // Components & Styles
-import { FadeInContainer } from '@/shared/components';
-import { HeaderCategory, ResumeBlock, SkillsList } from '../../../_components';
+import { FadeInContainer } from "@/shared/components";
+import { HeaderCategory, ResumeBlock, SkillsList } from "../../../_components";
 
 interface Props {
   params: { locale: string };
 }
 
-function SkillsPage() {
+function SkillsPage(): React.ReactElement {
   return (
     <FadeInContainer>
       <ResumeBlock>
-        <HeaderCategory textLanguageKey='skills_text' titleLanguageKey='skills_title' />
+        <HeaderCategory textLanguageKey="skills_text" titleLanguageKey="skills_title" />
         <SkillsList data={skills} />
       </ResumeBlock>
     </FadeInContainer>

@@ -10,7 +10,7 @@ interface Props {
   name: string;
 }
 
-function InfoLink({ url, name }: Props): JSX.Element {
+function InfoLink({ url, name }: Props): React.ReactElement {
   const pathname = usePathname();
 
   const pathnameWithoutLocale = `/${pathname.split("/").slice(2).join("/")}`;

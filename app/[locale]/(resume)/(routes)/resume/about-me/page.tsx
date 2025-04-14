@@ -1,16 +1,16 @@
 // Components & Styles
-import { FadeInContainer } from '@/shared/components';
-import { HeaderCategory, Hobbies, PersonalInfo, ResumeBlock } from '../../../_components';
+import { FadeInContainer } from "@/shared/components";
+import { HeaderCategory, Hobbies, PersonalInfo, ResumeBlock } from "../../../_components";
 
 interface Props {
   params: { locale: string };
 }
 
-function AboutMePage() {
+function AboutMePage(): React.ReactElement {
   return (
     <FadeInContainer>
       <ResumeBlock>
-        <HeaderCategory textLanguageKey='aboutme_text' titleLanguageKey='aboutme_title' />
+        <HeaderCategory textLanguageKey="aboutme_text" titleLanguageKey="aboutme_title" />
         <PersonalInfo />
         <Hobbies />
       </ResumeBlock>

@@ -1,34 +1,34 @@
-'use client';
+"use client";
 
-import { useRouter } from '@/shared/lib';
+import { useRouter } from "@/shared/lib";
 // Components & Styles
-import { Globe } from 'lucide-react';
+import { Globe } from "lucide-react";
 import {
   Button,
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from '..';
+} from "..";
 
-function Language(): JSX.Element {
+function Language(): React.ReactElement {
   const router = useRouter();
 
   const toggleLanguage = (locale: string) => {
-    router.replace('/', { locale });
+    router.replace("/", { locale });
     router.refresh();
   };
 
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger name='language-trigger' asChild>
-        <Button name='language' variant='outline' size='icon'>
+      <DropdownMenuTrigger name="language-trigger" asChild>
+        <Button name="language" variant="outline" size="icon">
           <Globe />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align='end' className='min-w-[2.5rem]'>
-        <DropdownMenuItem onClick={() => toggleLanguage('es')}>ES</DropdownMenuItem>
-        <DropdownMenuItem onClick={() => toggleLanguage('en')}>EN</DropdownMenuItem>
+      <DropdownMenuContent align="end" className="min-w-[2.5rem]">
+        <DropdownMenuItem onClick={() => toggleLanguage("es")}>ES</DropdownMenuItem>
+        <DropdownMenuItem onClick={() => toggleLanguage("en")}>EN</DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   );

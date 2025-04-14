@@ -3,7 +3,7 @@
   height: 250px;
   position: relative;
   overflow: hidden;
-  border: 2px solid var(--color-1);
+  border: 4px dashed var(--color-1);
   border-radius: 10px;
   cursor: default;
   animation: fadeIn 500ms forwards ease-in-out;

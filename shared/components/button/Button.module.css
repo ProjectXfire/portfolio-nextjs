@@ -15,6 +15,7 @@
   border-radius: 10px;
   top: -5px;
   transition: top 100ms;
+  border: 2px dotted var(--color-2);
 }
 
 .button-base {

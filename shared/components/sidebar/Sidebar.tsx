@@ -8,7 +8,7 @@ import styles from "./Sidebar.module.css";
 import { Link } from "@/shared/lib";
 import { Sheet, SheetContent, SheetDescription, SheetTitle } from "../ui/Sheet";
 
-function Sidebar(): JSX.Element {
+function Sidebar(): React.ReactElement {
   const t = useTranslations("navbar");
   const toggle = useSidebar((s) => s.toggle);
   const isOpen = useSidebar((s) => s.isOpen);

@@ -1,13 +1,13 @@
-import styles from './PersonalInfo.module.css';
+import styles from "./PersonalInfo.module.css";
 
 interface Props {
   keyData: string;
   data: string;
 }
 
-function InfoBlock({ keyData, data }: Props) {
+function InfoBlock({ keyData, data }: Props): React.ReactElement {
   return (
-    <div className={styles['info-block']}>
+    <div className={styles["info-block"]}>
       <p>{keyData}</p>
       <p>{data}</p>
     </div>

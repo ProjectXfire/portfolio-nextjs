@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 import styles from "./PersonalInfo.module.css";
 import InfoBlock from "./InfoBlock";
 
-function PersonalInfo(): JSX.Element {
+function PersonalInfo(): React.ReactElement {
   const t = useTranslations("commons");
 
   return (

@@ -1,8 +1,8 @@
 // Components & Styles
-import { ContactForm, ContactInfo } from '..';
-import styles from './Contact.module.css';
+import styles from "./Contact.module.css";
+import { ContactForm, ContactInfo } from "..";
 
-function Contact(): JSX.Element {
+function Contact(): React.ReactElement {
   return (
     <div className={styles.contact}>
       <ContactForm />

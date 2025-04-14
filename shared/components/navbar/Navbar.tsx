@@ -13,7 +13,7 @@ import styles from "./Navbar.module.css";
 import { Button, Language, ThemeToggle } from "..";
 import { Menu } from "lucide-react";
 
-function Navbar(): JSX.Element {
+function Navbar(): React.ReactElement {
   const pathname = usePathname();
   const open = useSidebar((s) => s.open);
   const t = useTranslations("navbar");

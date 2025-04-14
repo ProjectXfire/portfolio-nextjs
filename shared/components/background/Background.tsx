@@ -1,11 +1,11 @@
-'use client';
+"use client";
 
 // Components & Styles
-import styles from './Background.module.css';
+import styles from "./Background.module.css";
 
 const blocks = new Array(2500).fill(true);
 
-function Background(): JSX.Element {
+function Background(): React.ReactElement {
   return (
     <>
       <div
@@ -16,7 +16,7 @@ function Background(): JSX.Element {
         ))}
       </div>
       <div
-        className={`${styles['block-animated']} bg-[linear-gradient(0deg,_#ffffff_19%,_#d4d9e7_50%,_#ffffff_88%)] dark:bg-[linear-gradient(0deg,_#020817_19%,_#131a2c_50%,_#020817_88%)]`}
+        className={`${styles["block-animated"]} bg-[linear-gradient(0deg,_#ffffff_19%,_#d4d9e7_50%,_#ffffff_88%)] dark:bg-[linear-gradient(0deg,_#020817_19%,_#131a2c_50%,_#020817_88%)]`}
       />
     </>
   );

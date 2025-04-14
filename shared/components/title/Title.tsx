@@ -10,7 +10,7 @@ interface Props {
   size?: Size;
 }
 
-function Title({ size, text }: Props): JSX.Element {
+function Title({ size, text }: Props): React.ReactElement {
   const customSize = useMemo(() => {
     switch (size) {
       case "small":

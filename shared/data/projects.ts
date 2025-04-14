@@ -52,15 +52,6 @@ export const projects: IProject[] = [
     image: "/images/project_15.jpg",
   },
   {
-    id: 24,
-    name: "My Journal",
-    tags: ["REACT", "NEXTJS", "TYPESCRIPT"],
-    description: "This app is a simple journal, you can writes notes and add images if you prefer.",
-    demo: "https://my-journal-rnp5.vercel.app/login",
-    code: "https://github.com/ProjectXfire/my_journal",
-    image: "/images/project_25.jpg",
-  },
-  {
     id: 25,
     name: "Notion Clone",
     tags: ["REACT", "NEXTJS", "TYPESCRIPT"],
@@ -155,5 +146,14 @@ export const projects: IProject[] = [
     demo: "https://trapped-sigma.vercel.app/",
     code: "https://github.com/ProjectXfire/trapped",
     image: "/images/project_35.jpg",
+  },
+  {
+    id: 35,
+    name: "E-Shop",
+    tags: ["REACT", "TYPESCRIPT", "NEXTJS"],
+    description: "E-Shop is a virtual store when you can buy any clothes that you want",
+    demo: "https://e-shop-bay-iota.vercel.app/?page=1",
+    code: "https://github.com/ProjectXfire/e-shop",
+    image: "/images/project_36.jpg",
   },
 ];

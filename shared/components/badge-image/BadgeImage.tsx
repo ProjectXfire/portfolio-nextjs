@@ -1,6 +1,6 @@
-import NextImage from 'next/image';
+import NextImage from "next/image";
 // Components & Styles
-import styles from './BadgeImage.module.css';
+import styles from "./BadgeImage.module.css";
 
 interface Props {
   imagePath: string;
@@ -8,13 +8,13 @@ interface Props {
   index: number;
 }
 
-function BadgeImage({ imagePath, isContainerVisible, index }: Props): JSX.Element {
+function BadgeImage({ imagePath, isContainerVisible, index }: Props): React.ReactElement {
   return (
     <NextImage
-      className={`${styles['badge-image']} ${isContainerVisible && styles['badge-image--animate']}`}
+      className={`${styles["badge-image"]} ${isContainerVisible && styles["badge-image--animate"]}`}
       style={{ animationDelay: `${index * 300}ms` }}
       src={imagePath}
-      alt='image'
+      alt="image"
       width={50}
       height={50}
     />
