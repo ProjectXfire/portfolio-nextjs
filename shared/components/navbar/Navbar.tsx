@@ -2,7 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import { useCallback } from "react";
-import { Link } from "../../lib";
+import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import { useSidebar } from "@/shared/states";
 // Constants

@@ -1,8 +1,7 @@
-import { NextRequest, NextResponse } from 'next/server';
-import { envs } from '@/core/config';
-import { validEmail } from '@/shared/utils';
+import { NextRequest } from "next/server";
+import { envs } from "@/core/config";
 // Services
-import { EmailService } from '@/core/adapters/email';
+import { EmailService } from "@/core/adapters/email";
 
 const emailService = EmailService.instance({
   service: envs.mailerService,
@@ -10,7 +9,7 @@ const emailService = EmailService.instance({
   mailerSecret: envs.mailerSecretKey,
 });
 
-export async function POST(req: NextRequest, res: NextResponse) {
+export async function POST(req: NextRequest) {
   const { body, subject } = await req.json();
   const response = await emailService.sendEmail({
     subject,
@@ -18,7 +17,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
     to: envs.mailerEmail,
   });
   if (!response) {
-    return NextResponse.json({ error: 'Error on send message' }, { status: 400 });
+    return Response.json({ error: "Error on send message" }, { status: 400 });
   }
-  return NextResponse.json({ message: 'Message successful send' }, { status: 200 });
+  return Response.json({ message: "Message successful send" }, { status: 200 });
 }

@@ -1,15 +1,9 @@
 "use client";
 
-import { useRouter } from "@/shared/lib";
+import { useRouter } from "@/i18n/navigation";
 // Components & Styles
 import { Globe } from "lucide-react";
-import {
-  Button,
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "..";
+import Menu from "../menu/Menu";
 
 function Language(): React.ReactElement {
   const router = useRouter();
@@ -20,17 +14,18 @@ function Language(): React.ReactElement {
   };
 
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger name="language-trigger" asChild>
-        <Button name="language" variant="outline" size="icon">
+    <Menu
+      menuHeader={
+        <>
           <Globe />
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="min-w-[2.5rem]">
-        <DropdownMenuItem onClick={() => toggleLanguage("es")}>ES</DropdownMenuItem>
-        <DropdownMenuItem onClick={() => toggleLanguage("en")}>EN</DropdownMenuItem>
-      </DropdownMenuContent>
-    </DropdownMenu>
+        </>
+      }
+      items={[
+        { value: "es", label: "ES" },
+        { value: "en", label: "EN" },
+      ]}
+      onSelect={toggleLanguage}
+    />
   );
 }
 export default Language;

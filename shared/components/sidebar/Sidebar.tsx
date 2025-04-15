@@ -3,9 +3,9 @@
 import { useTranslations } from "next-intl";
 import { useSidebar } from "@/shared/states";
 import { routes } from "@/shared/constants";
+import { Link } from "@/i18n/navigation";
 // Components & Styles
 import styles from "./Sidebar.module.css";
-import { Link } from "@/shared/lib";
 import { Sheet, SheetContent, SheetDescription, SheetTitle } from "../ui/Sheet";
 
 function Sidebar(): React.ReactElement {

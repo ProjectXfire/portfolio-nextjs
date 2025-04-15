@@ -6,7 +6,7 @@
   border: 4px dashed var(--color-1);
   border-radius: 10px;
   cursor: default;
-  animation: fadeIn 500ms forwards ease-in-out;
+  animation: fadeIn 500ms forwards ease-in-out, card-border 2s ease-in-out infinite;
   overflow: hidden;
 }
 
@@ -97,4 +97,14 @@
   transform: rotate(-45deg);
   border-radius: 10px;
   color: var(--text-color);
+}
+
+@keyframes card-border {
+  0%,
+  100% {
+    border-color: var(--color-1);
+  }
+  50% {
+    border-color: var(--color-2);
+  }
 }

@@ -1,0 +1,55 @@
+{
+  "commons": {
+    "name": "Nombre",
+    "phone": "Teléfono",
+    "email": "Correo",
+    "nationality": "Nacionalidad",
+    "succesful-message": "Mensaje enviado de forma exitosa",
+    "error-message": "No se pudo enviar el mensaje",
+    "nacionality-name": "Peruana"
+  },
+  "navbar": {
+    "home": "Home",
+    "resume": "Resumen",
+    "projects": "Proyectos",
+    "contact": "Contacto"
+  },
+  "landing": {
+    "title": "Desarrolador Frontend",
+    "subtitle": "Hola soy",
+    "text": "Hola 😄, mi nombre es Gabriel Vargas Bravo, soy un programador auto motivado, aprendiendo de este gran mundo del desarrollo web. He empezado hace algunos años atrás, aprendiendo las cosas básicas como HTML, CSS y Javascript"
+  },
+  "resume": {
+    "main title": "¿Por qué contratarme?",
+    "main text": "Me gusta codear y aprender nuevas cosas continuamente.",
+    "education": "Educación",
+    "certificate": "Ver certificado",
+    "skills": "Habilidades",
+    "about me": "Acerca de mi",
+    "education_title": "Mi Educación",
+    "education_text": "Estos son mis estudios anteriores de Desarrollador Web, comencé a estudiar en 2020 por mi cuenta y luego tomé cursos en línea para reforzar lo que aprendí.",
+    "skills_title": "Mis Habilidades",
+    "skills_text": "Estas son mis habilidades que he aprendido durante mis estudios",
+    "aboutme_title": "Acerca de mi",
+    "aboutme_text": "Esta es mi información si quieres contactarme.",
+    "aboutme_name": "Nombre",
+    "aboutme_nationality": "Nacionalidad",
+    "aboutme_phone": "Teléfono",
+    "aboutme_email": "Correo",
+    "hobbie_title": "Mis Pasatiempos",
+    "hobbie_1": "Me gusta jugar videojuegos en mi tiempo libre.",
+    "hobbie_2": "Me gusta aprender nuevas canciones y poder tocarlas, es difícil algunas veces, pero es realmente emocionante una vez que lo haces."
+  },
+  "projects": {
+    "demo": "Demo",
+    "code": "Código"
+  },
+  "contact": {
+    "form_title": "Trabajemos juntos",
+    "form_text": "Si deseas contactarme, no dudes en mandar un mensaje.",
+    "form_to": "Correo",
+    "form_subject": "Tema",
+    "form_message": "Escribe tu mensaje aquí.",
+    "form_submit": "Enviar"
+  }
+}

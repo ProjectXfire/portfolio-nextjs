@@ -1,7 +1,7 @@
 "use client";
 
 import type { IProject } from "@/shared/interfaces";
-import { MouseEvent, useRef, useState, TouchEvent } from "react";
+import { MouseEvent, useRef, TouchEvent } from "react";
 import NextImage from "next/image";
 import NextLink from "next/link";
 import { useTranslations } from "next-intl";
@@ -17,7 +17,6 @@ function ProjectCard({ project, techIcons }: Props): React.ReactElement {
   const t = useTranslations("projects");
   const moveElement = useRef<HTMLDivElement | null>(null);
   const initMoveValue = useRef(0);
-  const [leftMove, setLeftMove] = useState(0);
 
   const handleOpenDoor = (e: MouseEvent): void => {
     e.preventDefault();
@@ -52,7 +51,6 @@ function ProjectCard({ project, techIcons }: Props): React.ReactElement {
   const dropDoor = () => {
     document.removeEventListener("mousemove", moveDoor);
     document.removeEventListener("mouseup", dropDoor);
-
     document.removeEventListener("touchmove", moveDoorMobile);
     document.removeEventListener("touchend", dropDoor);
   };
