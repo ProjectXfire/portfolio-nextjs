@@ -1,0 +1,55 @@
+{
+  "commons": {
+    "name": "Name",
+    "phone": "Phone",
+    "email": "Email",
+    "nationality": "Nationality",
+    "succesful-message": "Message successful send",
+    "error-message": "Error on send message",
+    "nacionality-name": "Peruvian"
+  },
+  "navbar": {
+    "home": "Home",
+    "resume": "Resume",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "landing": {
+    "title": "Frontend Developer",
+    "subtitle": "Hello I'm",
+    "text": "Hi 😄, my name is Gabriel Vargas Bravo, I am a Self-motivated developer, learning about this huge world of web development. I have started a few years ago, learning HTML, CSS and Javascript."
+  },
+  "resume": {
+    "main title": "Why hire me?",
+    "main text": "I like to code and continually learning new things about it.",
+    "education": "Education",
+    "certificate": "See certificate",
+    "skills": "Skills",
+    "about me": "About me",
+    "education_title": "My Education",
+    "education_text": "This is my former studies of Web Developer, I started 2020 study by myself and then take online courses to reforced that I have learned.",
+    "skills_title": "My Skills",
+    "skills_text": "These my skill that I have learned during my studies.",
+    "aboutme_title": "About me",
+    "aboutme_text": "This is my info if you want to contact me.",
+    "aboutme_name": "Name",
+    "aboutme_nationality": "Nationality",
+    "aboutme_phone": "Phone",
+    "aboutme_email": "Email",
+    "hobbie_title": "My Hobbies",
+    "hobbie_1": "I like to play video games in my free time.",
+    "hobbie_2": "I like learn new songs and playing it, is difficult sometimes, but really exciting when you learn it."
+  },
+  "projects": {
+    "demo": "Demo",
+    "code": "Code"
+  },
+  "contact": {
+    "form_title": "Let's work together",
+    "form_text": "If you want to contact me feel free to send a message",
+    "form_to": "Email",
+    "form_subject": "Subject",
+    "form_message": "Type your message here.",
+    "form_submit": "Send"
+  }
+}

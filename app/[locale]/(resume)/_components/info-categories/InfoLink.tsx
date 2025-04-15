@@ -1,7 +1,7 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { Link } from "@/shared/lib";
+import { Link } from "@/i18n/navigation";
 // Components & Styles
 import styles from "./InfoCategories.module.css";
 
