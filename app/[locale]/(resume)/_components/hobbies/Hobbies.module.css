@@ -1,46 +1,44 @@
 .hobbies {
+  margin-top: 15px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
 
 .hobbie-card {
-  width: 100%;
+  width: 70%;
+  height: 150px;
   position: relative;
   overflow: hidden;
+  justify-self: center;
   background-color: var(--bg-color);
   border-radius: 20px;
+  transform: rotate(-20deg) skew(25deg) translate(0, 0);
+  border-bottom: 7px solid var(--color-3);
+  border-left: 7px solid var(--color-3);
+  cursor: default;
 }
 
 .hobbie-card__image {
-  width: 650px;
-  height: 500px;
-  height: 0px;
-  position: relative;
-  top: -100px;
-  left: -120px;
-  border-radius: 10px;
-  overflow: hidden;
-  cursor: default;
-  transform: rotate(-20deg);
+  width: 100%;
+  height: auto;
   animation: animate-image 500ms ease-in-out forwards;
 }
 
 .hobbie-card__icon {
+  padding: 2px;
   position: absolute;
   z-index: 1;
-  right: 10px;
-  bottom: 10px;
-  scale: 0;
-  transform-origin: center;
-  animation: animate-scale 500ms ease-in-out 500ms forwards,
-    animate-move 3s ease-in-out 500ms infinite;
+  top: 5px;
+  right: 5px;
+  background: var(--color-white);
+  border-radius: 50%;
 }
 
 .hobbie-card__text {
   width: 100%;
   height: 100%;
-  padding: 20px;
+  padding: 10px;
   position: absolute;
   display: flex;
   align-items: center;
@@ -49,7 +47,7 @@
   z-index: 1;
   font-size: 1.1rem;
   line-height: 1.1rem;
-  color: white;
+  color: var(--text-color);
   text-shadow: 2px 1px 3px var(--color-1);
   animation: animate-text 1s ease-in-out forwards;
 }
@@ -58,12 +56,18 @@
   object-fit: cover;
 }
 
+@media (width < 900px) {
+  .hobbies {
+    grid-template-columns: 1fr;
+  }
+}
+
 @keyframes animate-image {
   0% {
     height: 0px;
   }
   100% {
-    height: 250px;
+    height: 170px;
   }
 }
 
@@ -73,61 +77,5 @@
   }
   100% {
     scale: 100%;
-  }
-}
-
-@keyframes animate-scale {
-  0% {
-    scale: 0;
-  }
-  100% {
-    scale: 1;
-  }
-}
-
-@keyframes animate-move {
-  0% {
-    transform: translateY(0) scaleY(1);
-    right: 20px;
-  }
-  10% {
-    transform: translateY(-30px) scaleY(0.9);
-    right: 30px;
-  }
-  20% {
-    transform: translateY(0) scaleY(1);
-    right: 40px;
-  }
-  30% {
-    transform: translateY(-30px) scaleY(0.9);
-    right: 50px;
-  }
-  40% {
-    transform: translateY(0) scaleY(1);
-    right: 60px;
-  }
-  50% {
-    transform: translateY(-30px) scaleY(0.9);
-    right: 70px;
-  }
-  60% {
-    transform: translateY(0) scaleY(1);
-    right: 60px;
-  }
-  70% {
-    transform: translateY(-30px) scaleY(0.9);
-    right: 50px;
-  }
-  80% {
-    transform: translateY(0) scaleY(1);
-    right: 40px;
-  }
-  90% {
-    transform: translateY(-30px) scaleY(0.9);
-    right: 30px;
-  }
-  100% {
-    transform: translateY(0) scaleY(1);
-    right: 20px;
   }
 }
