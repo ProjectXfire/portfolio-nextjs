@@ -13,16 +13,9 @@ function Hobbies(): React.ReactElement {
     <>
       <Title text={t("hobbie_title")} size="medium" />
       <div className={styles.hobbies}>
-        <div className={styles["hobbie-card"]}>
+        <div className={`${styles["hobbie-card"]}`}>
           <p className={styles["hobbie-card__text"]}>{t("hobbie_1")}</p>
-          <NextImage
-            className={styles["hobbie-card__icon"]}
-            width={50}
-            height={50}
-            src="/icons/game.png"
-            alt="game"
-          />
-          <div className={styles["hobbie-card__image"]}>
+          <div className={`${styles["hobbie-card__image"]} `}>
             <NextImage
               fill
               src="/images/hobbie_1.jpg"
@@ -31,17 +24,17 @@ function Hobbies(): React.ReactElement {
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </div>
-        </div>
-        <div className={styles["hobbie-card"]}>
-          <p className={styles["hobbie-card__text"]}>{t("hobbie_2")}</p>
           <NextImage
             className={styles["hobbie-card__icon"]}
-            width={50}
-            height={50}
-            src="/icons/guitar.png"
+            width={25}
+            height={25}
+            src="/icons/game.png"
             alt="game"
           />
-          <div className={styles["hobbie-card__image"]}>
+        </div>
+        <div className={`${styles["hobbie-card"]}`} style={{ justifySelf: "center" }}>
+          <p className={styles["hobbie-card__text"]}>{t("hobbie_2")}</p>
+          <div className={`${styles["hobbie-card__image"]}`}>
             <NextImage
               fill
               src="/images/hobbie_2.jpg"
@@ -50,6 +43,13 @@ function Hobbies(): React.ReactElement {
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </div>
+          <NextImage
+            className={styles["hobbie-card__icon"]}
+            width={25}
+            height={25}
+            src="/icons/guitar.png"
+            alt="game"
+          />
         </div>
       </div>
     </>

@@ -17,6 +17,7 @@ function List({ data }: Props): React.ReactElement {
           title={info.name}
           subtitle={info.school}
           link={info.link}
+          image={info.image}
         />
       ))}
     </ul>

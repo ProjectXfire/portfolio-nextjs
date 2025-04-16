@@ -10,42 +10,70 @@
   gap: 20px;
 }
 
+/* INFO LINK */
+
 .info-link {
   position: relative;
   width: 100%;
   display: flex;
-  overflow: hidden;
-  border-radius: 8px;
-  border: 2px solid var(--color-1);
+  border-radius: 5px;
 }
 
 .info-link__link {
+  position: relative;
   width: 100%;
-  padding: 10px 5px;
-  font-size: 1.2rem;
-  text-align: center;
+  height: 50px;
+  transition: 1s;
+  transform-style: preserve-3d;
+  transform: perspective(1000px) rotateX(0deg);
 }
 
-.info-link__effect {
+.info-link__link:hover {
+  transform: perspective(1000px) rotateX(180deg);
+}
+
+.link-block {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  background-color: var(--color-3);
-  transform: translate(-100%) skewX(-50deg);
-  transition: all 500ms;
-  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-color) !important;
+  background: rgba(18, 44, 94, 0.9);
+  font-size: 1.5rem;
+  transition: 0.5s;
+  border: 2px dashed var(--text-color);
+  border-radius: 5px;
+  box-sizing: border-box;
+  box-shadow: insert 0 20px 50px rgba(0, 0, 0, 0.2);
+}
+
+.info-link__link:hover .link-block {
+  color: var(--white);
+  background: var(--blue-color-3);
+}
+.info-link__link .link-block:nth-child(1) {
+  transform: rotateX(360deg) translateZ(25px);
+  color: #ffffffaa;
+}
+.info-link__link .link-block:nth-child(2) {
+  transform: rotateX(270deg) translateZ(25px);
+}
+.info-link__link .link-block:nth-child(3) {
+  transform: rotateX(180deg) translateZ(25px);
+}
+.info-link__link .link-block:nth-child(4) {
+  transform: rotateX(90deg) translateZ(25px);
 }
 
 .info-link-selected {
-  transform: translate(50%) skewX(-50deg);
+  transform: perspective(1000px) rotateX(180deg);
 }
 
-.info-link:hover .info-link__effect {
-  transform: translate(50%) skewX(-50deg);
-}
-
-@media screen and (min-width: 768px) {
-  .info-categories-text {
-    max-width: 300px;
-  }
+.info-link-selected-block {
+  color: var(--white);
+  background: var(--blue-color-3);
 }

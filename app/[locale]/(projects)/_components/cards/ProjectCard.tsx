@@ -11,9 +11,10 @@ import { Braces, MoveUpRight } from "lucide-react";
 interface Props {
   project: IProject;
   techIcons: string[];
+  index: number;
 }
 
-function ProjectCard({ project, techIcons }: Props): React.ReactElement {
+function ProjectCard({ project, techIcons, index }: Props): React.ReactElement {
   const t = useTranslations("projects");
   const moveElement = useRef<HTMLDivElement | null>(null);
   const initMoveValue = useRef(0);
@@ -26,13 +27,13 @@ function ProjectCard({ project, techIcons }: Props): React.ReactElement {
     document.addEventListener("mouseup", dropDoor);
   };
 
-  const handleOpenDoorMobile = (e: TouchEvent<HTMLButtonElement>) => {
+  const handleOpenDoorMobile = (e: TouchEvent<HTMLButtonElement>): void => {
     initMoveValue.current = e.touches[0].clientX;
     document.addEventListener("touchmove", moveDoorMobile);
     document.addEventListener("touchend", dropDoor);
   };
 
-  const moveDoorMobile = (e: globalThis.TouchEvent) => {
+  const moveDoorMobile = (e: globalThis.TouchEvent): void => {
     const door = moveElement.current;
     if (!door) return;
     const position = (initMoveValue.current - e.touches[0].clientX) * 2;
@@ -40,7 +41,7 @@ function ProjectCard({ project, techIcons }: Props): React.ReactElement {
     door.style.setProperty("left", `-${value}px`);
   };
 
-  const moveDoor = (e: globalThis.MouseEvent) => {
+  const moveDoor = (e: globalThis.MouseEvent): void => {
     const door = moveElement.current;
     if (!door) return;
     const position = (initMoveValue.current - e.clientX) * 2;
@@ -48,7 +49,7 @@ function ProjectCard({ project, techIcons }: Props): React.ReactElement {
     door.style.setProperty("left", `-${value}px`);
   };
 
-  const dropDoor = () => {
+  const dropDoor = (): void => {
     document.removeEventListener("mousemove", moveDoor);
     document.removeEventListener("mouseup", dropDoor);
     document.removeEventListener("touchmove", moveDoorMobile);
@@ -56,7 +57,7 @@ function ProjectCard({ project, techIcons }: Props): React.ReactElement {
   };
 
   return (
-    <article className={styles.card}>
+    <article className={`${styles.card}`} style={{ animationDelay: `${index * 200}ms` }}>
       <div ref={moveElement} className={styles.card__content}>
         <div className={styles.card__image}>
           <NextImage
@@ -88,7 +89,7 @@ function ProjectCard({ project, techIcons }: Props): React.ReactElement {
           onMouseDown={handleOpenDoor}
           onTouchStart={handleOpenDoorMobile}
         >
-          <NextImage src="/icons/handle.png" alt="handle" width={35} height={35} />
+          <NextImage src="/icons/arrow.png" alt="handle" fill />
         </button>
         <div className={styles.card__tags}>
           {techIcons.map((image, i) => (

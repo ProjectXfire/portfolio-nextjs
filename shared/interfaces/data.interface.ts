@@ -5,6 +5,7 @@ export interface IData {
   school: string;
   link: string;
   demo?: string;
+  image: string;
 }
 
 export interface ISkill {

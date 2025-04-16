@@ -17,14 +17,41 @@ function InfoLink({ url, name }: Props): React.ReactElement {
 
   return (
     <li className={styles["info-link"]}>
-      <Link className={styles["info-link__link"]} href={url}>
-        {name}
-      </Link>
-      <div
-        className={`${styles["info-link__effect"]} ${
+      <Link
+        className={`${styles["info-link__link"]} ${
           url === pathnameWithoutLocale ? styles["info-link-selected"] : ""
         }`}
-      />
+        href={url}
+      >
+        <span
+          className={`${styles["link-block"]} ${
+            url === pathnameWithoutLocale ? styles["info-link-selected-block"] : ""
+          }`}
+        >
+          {name}
+        </span>
+        <span
+          className={`${styles["link-block"]} ${
+            url === pathnameWithoutLocale ? styles["info-link-selected-block"] : ""
+          }`}
+        >
+          {name}
+        </span>
+        <span
+          className={`${styles["link-block"]} ${
+            url === pathnameWithoutLocale ? styles["info-link-selected-block"] : ""
+          }`}
+        >
+          {name}
+        </span>
+        <span
+          className={`${styles["link-block"]} ${
+            url === pathnameWithoutLocale ? styles["info-link-selected-block"] : ""
+          }`}
+        >
+          {name}
+        </span>
+      </Link>
     </li>
   );
 }

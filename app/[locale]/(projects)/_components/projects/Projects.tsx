@@ -45,9 +45,9 @@ function Projects({ projects }: Props): React.ReactElement {
         ))}
       </div>
       <ul className={styles["projects-list"]}>
-        {projectsFiltered.map((project) => {
+        {projectsFiltered.map((project, i) => {
           const techIcons = project.tags.map((tag) => technologies[tag.toLowerCase()]);
-          return <ProjectCard key={project.id} project={project} techIcons={techIcons} />;
+          return <ProjectCard key={project.id} index={i} project={project} techIcons={techIcons} />;
         })}
       </ul>
     </div>

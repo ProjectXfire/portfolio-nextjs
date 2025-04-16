@@ -58,6 +58,22 @@
   font-weight: bold;
 }
 
+.certificate-card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+}
+
+.footer-image {
+  width: 35px;
+  height: 35px;
+  padding: 5px;
+  background: var(--color-2);
+  object-fit: cover;
+  border-radius: 50%;
+}
+
 .certificate-link {
   width: 100%;
   padding: 10px;
